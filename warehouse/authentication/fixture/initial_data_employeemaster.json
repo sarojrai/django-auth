@@ -1,0 +1,58 @@
+[
+  {
+    "model": "authentication.EmployeeMaster",
+    "pk": 1,
+    "fields": {
+      "user": "1",
+      "employee_code": "ORDC-1000",
+      "firstname": "Anil",
+      "middle_name": "Kumar",
+      "lastname": "Gupta",
+      "organisation": 1,
+      "role": 1,
+      "department": 1,
+      "service_centre": 1,
+      "email": "ordcinfo@gmail.com",
+      "mobile_number": "+918802872573",	  
+      "login_active": 1,	  
+      "staff_status": 1,
+      "allow_concurent_login": 0,
+      "query_limit": 60,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "login_status_app":true,	  
+	  "login_status_web":true,	  
+	  "status":1.0,	  
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.EmployeeMaster",
+    "pk": 2,
+    "fields": {
+      "user": "2",
+      "employee_code": "ORDC-1001",
+      "firstname": "Test",
+      "middle_name": "User",
+      "lastname": "",
+      "organisation": "1",
+      "role": 1,
+      "department": 1,
+      "service_centre": 1,
+      "email": "testuser@gmail.com",
+      "mobile_number": "+91987541112",	  
+      "login_active": 1,	  
+      "staff_status": 1,
+      "allow_concurent_login": 0,
+      "query_limit": 50,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "login_status_app":true,	  
+	  "login_status_web":true,	  
+	  "status":1.0,	  
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  }
+]

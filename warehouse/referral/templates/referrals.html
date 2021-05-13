@@ -1,0 +1,66 @@
+{% extends "base/base.html" %} 
+{% load staticfiles %} 
+{% block content %}
+<div class="content-wrapper">
+	<section class="page-bar">{% include "breadcrumb-referral.html" %}</section>
+	<!-- BEGIN PAGE CONTENT-->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="portlet box delivrd">
+					<div class="portlet-title" style='background-color:#3c8dbc;color:#fff;margin:0px;'>
+						<h1>Refer friends &amp; Earn Credit </h1>
+						<h5>Introduce to a friend {{company}} and you'll be credited Rs.{{amount}} to your account </h5>
+					</div>
+					<div class="pull-right" style="padding:0 10px;margin-top:-87px;margin-right:20px;background-color:#00a5bb;color:#fff;">
+						<h2>Rs{{amount}} </h2> 
+						<h4> Credit </h4> 
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class='col-md-12' style=''>
+								<h2>Share my referral link with friends</h2>
+								<div class="input-group">
+									<input type="text" id="myInput" value="{{ref_url}}" class="form-control" placeholder=""> <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button" onclick="myFunction()" >Copy Link</button>
+                    </span>
+								</div>
+								<!-- /input-group -->
+								<br/>
+								<div style="margin:10px; text-align:right;">
+									<a href="https://www.facebook.com/sharer/sharer.php?u={{ ref_url }}" target="_blank"> <i class="fa fa-facebook-square fa-4x" style="color:#3b5998"></i>
+									</a>
+									<a href="https://twitter.com/home?status=Hello%20this%20is%20a%20%23tag%20that%20I%20want%20to%20share%20at%20some%20point.%20Tweet%20%40justinmitchel.%20{{ ref_url }}" target="_blank"> <i class="fa fa-twitter-square fa-4x" style="color:#4099FF"></i>
+									</a>
+									<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ ref_url}}&title=Hello%20this%20this%20is%20a%20title.&summary=Hello%20this%20this%20is%20a%20title.&source={{ ref_url }}" target="_blank"> <i class="fa fa-linkedin-square fa-4x" style="color:#007bb6"></i>
+									</a>
+									<a href="https://web.whatsapp.com/send?text={{ ref_url}}" data-action="share/whatsapp/share" target="_blank"> <i class="fa fa-whatsapp fa-4x" style="color:#25d366"></i>
+									</a>
+									<a href='https://plus.google.com/share?url=http://codingforentrepreneurs.com' target="_blank"> <i class="fa fa-google-plus-square fa-4x" style="color:#D34836"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<!-- END CONTENT -->
+</section>
+</div>
+<style>
+	.control-label-margin-top{
+	  margin-top:11px;
+	  }
+</style>
+<script>
+	function myFunction() {
+	  var copyText = document.getElementById("myInput");
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999)
+	  document.execCommand("copy");
+	  alert("Copied the text: " + copyText.value);
+	}
+</script>
+{% endblock %}

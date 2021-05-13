@@ -1,0 +1,8 @@
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "Fetched token successfully",
+    "result": {
+        "token": "244f8cbd237a3ce4b5ebc3d1e72c945d932b45a0"
+    }
+}

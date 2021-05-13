@@ -1,0 +1,202 @@
+[
+  {
+    "model": "authentication.Department",
+    "pk": 1,
+    "fields": {
+      "name": "Account",
+      "code": "AC",
+      "department_type": "01",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 2,
+    "fields": {
+      "name": "Customer Service",
+      "code": "CS",
+      "department_type": "02",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 3,
+    "fields": {
+      "name": "Customer Service Accounts",
+      "code": "CSA",
+      "department_type": "03",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 4,
+    "fields": {
+      "name": "Finance",
+      "code": "FN",
+      "department_type": "04",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 5,
+    "fields": {
+      "name": "Human Resources",
+      "code": "HR",
+      "department_type": "05",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 7,
+    "fields": {
+      "name": "Information Technology",
+      "code": "IT",
+      "department_type": "07",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 8,
+    "fields": {
+      "name": "Operations",
+      "code": "OP",
+      "department_type": "08",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+  {
+    "model": "authentication.Department",
+    "pk": 9,
+    "fields": {
+      "name": "Sale",
+      "code": "SL",
+      "department_type": "09",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0,
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  },
+{
+    "model": "authentication.DepartmentType",
+    "pk": 1,
+    "fields": {
+      "department_type_code": "AC",
+      "department_type_description": "Account",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 2,
+    "fields": {
+      "department_type_code": "CS",
+      "department_type_description": "Customer Service",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 3,
+    "fields": {
+      "department_type_code": "CSA",
+      "department_type_description": "Customer Service Accounts",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 4,
+    "fields": {
+      "department_type_code": "FN",
+      "department_type_description": "Finance",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 5,
+    "fields": {
+      "department_type_code": "HR",
+      "department_type_description": "Human Resources",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 7,
+    "fields": {
+      "department_type_code": "IT",
+      "department_type_description": "Information Technology",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 8,
+    "fields": {
+      "department_type_code": "OP",
+      "department_type_description": "Operations",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.DepartmentType",
+    "pk": 9,
+    "fields": {
+      "department_type_code": "SL",
+      "department_type_description": "Sale",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",
+	  "status":1.0
+    }
+  }
+]

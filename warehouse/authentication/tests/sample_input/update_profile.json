@@ -1,0 +1,73 @@
+
+Header: 
+Authorization : Token 244f8cbd237a3ce4b5ebc3d1e72c945d932b45a0
+{
+	"EMPCDDD003": {
+		"general_details": {
+			"employee_id": 2,
+			"employee_code": "EMPCDDD003",
+			"firstname": "saroj2",
+			"lastname": "rai3",
+			"added_on": "2020-07-24 14:58:54.448834+00:00",
+			"is_active": 0.0,
+			"active_from": "",
+			"blood_group": "A"
+		},
+		"parmanent_address": {
+			"street_address": "borivali",
+			"landmark": "",
+			"city_id": 1,
+			"city_name": "MMUBAI",
+			"city_code": "MU",
+			"state_id": 1,
+			"state_name": "MAHARSHTRA",
+			"state_code": "MH",
+			"country_id": 1,
+			"country_name": "INDIA",
+			"country_code": "IN",
+			"pincode": 400101
+		},
+		"communication_address": {
+			"street_address": "borivali",
+			"landmark": "",
+			"city_id": 1,
+			"city_name": "MMUBAI",
+			"city_code": "MU",
+			"state_id": 1,
+			"state_name": "MAHARSHTRA",
+			"state_code": "MH",
+			"country_id": 1,
+			"country_name": "INDIA",
+			"country_code": "IN",
+			"pincode": 400101
+		},
+		"contact_detail": {
+			"mobile_number": "9987313683",
+			"email": "rai.saroj20@gmail.com",
+			"emergency_contact_person": "",
+			"emergency_mobile": ""
+		},
+		"serviceable_area": [],
+		"company_detail": {
+			"company_id": 1,
+			"name": "ORDC",
+			"company_poc": null,
+			"company_email": "rai.saroj_89@yahoo.in",
+			"company_phone": 9987313693,
+			"company_website": "",
+			"address": "omkar singh chawl",
+			"city": "MMUBAI",
+			"state": "",
+			"pincode": 400101,
+			"country": ""
+		},
+		"kyc_detail": {
+			"kyc_id_name": "Idendety",
+			"kyc_id": "PAN1",
+			"kyc_id_status": 1.0,
+			"kyc_adderess_name": "ADDHAR",
+			"kyc_adderess": "kandivali",
+			"kyc_adderess_status": 1
+		}
+	}
+}

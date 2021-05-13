@@ -1,0 +1,163 @@
+{% extends "base/base.html" %}
+{% load staticfiles %} 
+{% block content %}
+<div class="content-wrapper">
+   <section class="page-bar">
+      {% include "authentication/breadcrumb-profile.html" %}
+   </section>
+   <!-- BEGIN PAGE CONTENT-->
+   <section class="content">
+    <div class="row">
+        <div class="col-md-12">         
+            <div class="portlet box delivrd">
+                <div class="portlet-title">
+                   <div class="caption">
+                      <i class="fa fa-random"></i>User Status
+                   </div>
+                   <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" id="btn-sku-edit"><i class="fa fa-cog"></i></button>
+                    <button type="button" class="btn btn-box-tool" id="btn-sku-view"><i class="fa fa-cog"></i></button>
+                   </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-md-12 border-right sku-view">
+                            <form class="form-horizontal" action="">
+
+                                    
+                                    <div class="btn-group action-panel">
+                                        <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                          <i class="fa fa-cog"></i></button>
+                                        <ul class="dropdown-menu" role="menu">
+                                          <li><a href="#"><i class="fa fa-fw fa-plus-circle"></i> Add</a></li>
+                                          <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a></li>
+                                          <li><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a></li>
+                                        </ul>
+                                      </div>
+                                    
+                                  <div class="form-group">
+                                        <label class="control-label col-lg-2 col-md-2" style="padding-top:16px;">User:</label>
+                                        <div class="col-lg-3 col-md-3 pt-10">
+                                            <select id="{{ form.club.id_for_label }}" name="{{ form.club.html_name }}" class="form-control">
+                                                <option value="" selected>Select User</option>
+                                               {% for key, value in employee_detail_data.items %}
+                                                <option value="{{ key }}">{{ value }}</option>
+                                                {% endfor %}
+                                            </select>  
+                                        </div>
+                                         </div>
+                                       <div class="form-group">
+                                        <label class="control-label col-lg-2 col-md-2"  style="padding-top:16px;">Status:</label>
+                                        <div class="col-lg-3 col-md-3 pt-10">
+                                            <select id="{{ form.club.id_for_label }}" name="{{ form.club.html_name }}" class="form-control">
+                                                <option value="" selected>Select Status</option> 
+                                                <option value="1">Active</option>
+                                                <option value="0">Deactive</option>
+                                            </select> 
+                                        </div>
+                                       
+                                    </div>
+
+                                    <div class="form-group">
+                                    <label class="control-label col-lg-2 col-md-2"  style="padding-top:16px;"></label>
+                                    <div class="col-lg-3 col-md-3 pt-10">
+                                    <button type="submit" class="btn btn-primary btn-block btn-flat" name="web_access" value="True">Submit</button>
+                                    </div>
+                                    </div>
+
+                                   
+                                    
+                         
+                                
+
+                            </form>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div>
+    <!-- END CONTENT -->
+    </section>
+</div>
+
+
+<script>
+    $( document ).ready(function() {
+        $("#date").datepicker({ 
+            format: 'yyyy-mm-dd'
+        });
+        $("#date").on("change", function () {
+            var fromdate = $(this).val();
+        });
+    }); 
+ </script>
+<script>
+    $( document ).ready(function() {
+       $("#cc-update").click(function(){
+   
+           var date = $("#date").val();
+           var frequency = $("#frequency").val();
+           var CC_Type = $("#cc-type").val();
+   
+           var cc_rows = [{"Start Date":date, "Frequency":frequency, "CC Type":CC_Type}];
+   
+           
+           cc_details = {
+             "codes":cc_rows
+           }
+           alert(cc_details);
+           console.log(cc_details);
+   
+            $.ajax({
+                   type:"POST",
+                   url:"",
+                          data:JSON.stringify(cc_details),
+                          success: function (resp){
+                          alert(resp) //TODO Show Response
+                          console.log(resp)
+                      }
+                  });
+   
+      });
+   });
+</script>
+<script>
+    $(document).ready(function(){
+        $("#btn-sku-edit").click(function(){
+            $(".sku-edit").show();
+            $(".sku-view").hide();
+            $("#btn-sku-view").show();
+            $("#btn-sku-edit").hide();
+        });
+        $("#btn-sku-view").click(function(){
+            $(".sku-edit").hide();
+            $(".sku-view").show();
+            $("#btn-sku-view").hide();
+            $("#btn-sku-edit").show();
+        });
+        $("#sku-cancel, #sku-update").click(function(){
+            $(".sku-view").show();
+            $(".sku-edit").hide(); 
+            $("#btn-sku-view").hide();
+            $("#btn-sku-edit").show();
+        });
+
+    });
+ </script>
+
+{% endblock %}
+
+{% block script %}
+	{% comment %} <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> {% endcomment %}
+	{# JQUERY FILE UPLOAD SCRIPTS #}
+	<script src="{% static 'jquery/js/vendor/jquery.ui.widget.js' %}"></script>
+	<script src="{% static 'jquery/js/jquery.iframe-transport.js' %}"></script>
+	<script src="{% static 'jquery/js/jquery.fileupload.js' %}"></script>
+
+	{# PHOTOS PAGE SCRIPTS #}
+	<script src="{% static 'jquery/js/basic-upload.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{
+    "status": "Failed",
+    "status_code": 200,
+    "message": "No record found for given employee_code",
+    "result": {
+        "general_details": {
+            "employee_id": 2,
+            "employee_code": "EMPCDDD004",
+            "firstname": "saroj2",
+            "lastname": "rai3",
+            "is_active": 0.0,
+            "active_from": "",
+            "blood_group": "A"
+        },
+        "parmanent_address": {
+            "street_address": "borivali",
+            "landmark": "",
+            "city_id": 1,
+            "city_name": "",
+            "city_code": "",
+            "state_id": 1,
+            "state_name": "",
+            "state_code": "",
+            "country_id": 1,
+            "country_name": "",
+            "country_code": "",
+            "pincode": "400101"
+        },
+        "communication_address": {
+            "street_address": "borivali",
+            "landmark": "",
+            "city_id": 1,
+            "city_name": "",
+            "city_code": "",
+            "state_id": 1,
+            "state_name": "",
+            "state_code": "",
+            "country_id": 1,
+            "country_name": "",
+            "country_code": "",
+            "pincode": "400101"
+        },
+        "contact_detail": {
+            "mobile_number": "9987313683",
+            "email": "rai.saroj20@gmail.com"
+        },
+        "serviceable_area": [],
+        "company_detail": {
+            "company_id": 1,
+            "name": "",
+            "company_poc": "",
+            "company_email": "",
+            "company_phone": "",
+            "company_website": "",
+            "address": "",
+            "city": "",
+            "state": "",
+            "pincode": "",
+            "country": ""
+        },
+        "kyc_detail": {
+            "kyc_id_name": "Identy",
+            "kyc_id": "PAN",
+            "kyc_id_status": 1
+        }
+    }
+}

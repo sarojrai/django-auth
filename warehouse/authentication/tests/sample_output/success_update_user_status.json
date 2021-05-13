@@ -1,0 +1,24 @@
+
+
+#RS1 Deactive
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You have successfully changed status as deactive",
+    "result": {
+        "employee_code": "EMPCDDD003",
+        "action_type": "DEACTIVATE"
+    }
+}
+}
+
+#RS2 Active
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You have successfully changed status as active",
+    "result": {
+        "employee_code": "EMPCDDD003",
+        "action_type": "ACTIVATE"
+    }
+}

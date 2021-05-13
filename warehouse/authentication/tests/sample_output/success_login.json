@@ -1,0 +1,15 @@
+#RS1
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You are successfully logged in",
+    "result": {
+        "request_type": "login",
+        "app_version": "1.0 .0",
+        "device_id": "DEV1",
+        "device_type": "MOBILE",
+        "ip": "127.0 .0 .1: 8000",
+        "app_id": "12",
+        "imei": "0987654321"
+    }
+}

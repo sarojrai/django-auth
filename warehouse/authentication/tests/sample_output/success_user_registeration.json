@@ -1,0 +1,12 @@
+{
+    "status": "Success",
+    "status_code": 200,
+    "message": "You have been successfully registered",
+    "result": {
+        "firstname": "saroj2",
+        "lastname": "rai3",
+        "mobile_number": "9987313684",
+        "role_id": 2,
+        "employee_code": "EMP9942734"
+    }
+}

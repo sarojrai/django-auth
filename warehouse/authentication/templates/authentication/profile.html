@@ -1,0 +1,871 @@
+{% extends "base/base.html" %}
+{% load staticfiles %} 
+{% block content %}
+<div class="content-wrapper">
+  <section class="page-bar">
+    {% include "authentication/breadcrumb-profile.html" %}
+  </section>
+  <!-- BEGIN PAGE CONTENT-->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="portlet box delivrd">
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-random"></i>Details
+            </div>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" id="btn-sku-edit">
+              <i class="fa fa-cog"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" id="btn-sku-view">
+              <i class="fa fa-cog"></i>
+              </button>
+            </div>
+           
+          </div>
+          <div class="portlet-body">
+          
+            <div class="row">
+
+              <div class="col-md-9 border-right sku-view">
+                <div style="text-align:center">
+                  {% if messages %}
+                <ul class="messages" style="">
+                  {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }} alert alert-success"{% endif %}>{{ message }}  </li>
+                  {% endfor %}
+                </ul>
+             {% endif %}
+                </div>
+             
+                <form class="form-horizontal" action="">
+                  <fieldset class="panel-fieldset  mt-30">
+                    <legend class="panel-legend">General Details </legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Employee Code:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.employee_code}}</span>
+                      </div>
+                      <label class="control-label col-lg-3 col-md-3">First Name:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.firstname}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Last name:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.lastname}}</span>
+                      </div>
+                      <label class="control-label col-lg-3 col-md-3">Blood Group:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.blood_group}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Status:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span> 
+                        {% if resp.general_details.is_active|stringformat:"s"  == "1.0" %}  Active {% else %} Deactive{% endif %}  </span>
+                      </div>
+                      <label class="control-label col-lg-3 col-md-3">Active From:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.active_from}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Added On:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.general_details.added_on}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Parmanent Address</legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Street Address:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.street_address}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Landmark:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.landmark}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">City:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.city_name}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">State:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.state_name}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Country:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.country_name}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Pincode:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.pincode}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Communcation Address</legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Street Address:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.street_address}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Landmark:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.landmark}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">City:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.city_name}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">State:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.state_name}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Country:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.country_name}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Pincode:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.parmanent_address.pincode}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Contact Detail</legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Mobile:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.contact_detail.mobile_number}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Email:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.contact_detail.email}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Emergency Contact Person:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.contact_detail.emergency_contact_person}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Emergency Mobile No:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.contact_detail.emergency_mobile}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Company Detail</legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">ID:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.company_id}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Name:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.company_detail.name}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">POC:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.company_poc}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Email:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.company_detail.company_email}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Phone:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.company_phone}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Website:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.company_detail.company_website}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Address:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.address}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">City:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.company_detail.city}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">State:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.state}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Country:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.company_detail.country}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Pincode:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.company_detail.pincode}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">KYC Detail</legend>
+                    <div class="btn-group action-panel">
+                      <button type="button" class="btn text-primary btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                      <i class="fa fa-cog"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-fw fa-plus-circle"></i> Add
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">ID:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_id}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Name:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_id_name}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Status:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_id_status}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Address :</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_adderess}}</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Address Name:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_adderess_name}}</span>
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Address Status:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                        <span>{{resp.kyc_detail.kyc_adderess_status}}</span>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+              <div class="col-md-9 border-right sku-edit">
+                <form class="form-horizontal" action="" method="POST">
+                    {% csrf_token %}
+                  <fieldset class="panel-fieldset  mt-30">
+                    <legend class="panel-legend">General Details </legend>
+                    <div class="form-group">
+                      <label class="control-label control-label-margin-top col-lg-3 col-md-3">Employee Code:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <input type="text" name="general_details[employee_code]" class="form-control" value ="{{resp.general_details.employee_code}}" readonly>
+                        <input type="hidden" name="general_details[employee_id]" class="form-control" value ="{{resp.general_details.employee_id}}" >
+                        
+                      </div>
+                      <label class="control-label control-label-margin-top col-lg-2 col-md-3">First Name:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                        <input type="text" name="general_details[firstname]" class="form-control"   value ="{{resp.general_details.firstname}}">
+                      </div>
+                    </div>
+
+                    
+                    <div class="form-group">
+
+                      <label class="control-label control-label-margin-top col-lg-3 col-md-3">Last name:</label>
+                        <div class="col-lg-3 col-md-3 pt-10">
+                            <input type="text" name="general_details[lastname]" class="form-control"   value ="{{resp.general_details.lastname}}" />
+                        </div>
+                      
+                      <label class="control-label control-label-margin-top col-lg-2 col-md-3">Blood Group:</label>
+                        <div class="col-lg-3 col-md-3 pt-10">
+                        <input type="text" name="general_details[blood_group]" class="form-control"   value ="{{resp.general_details.blood_group}}">
+                    
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Status:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                      
+                      <select  name="general_details[is_active]" class="form-control">
+                      
+                                                <option value="" >Select Status</option> 
+                                                <option value="1.0"   {% if resp.general_details.is_active|stringformat:"s"  == "1.0" %} selected="selected" {% endif %} >Active</option>
+                                                <option value="0.0" {% if resp.general_details.is_active|stringformat:"s"  == "0.0" %}selected="selected"{% endif %} >Deactive</option>
+                                            </select> 
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Active From:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                       <input type="text" name="general_details[active_from]" class="form-control"   value ="{{resp.general_details.active_from}}">
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-3 col-md-3">Added On:</label>
+                      <div class="col-lg-3 col-md-3 pt-10">
+                      <input type="text" name="general_details[added_on]" class="form-control"   value ="{{resp.general_details.added_on}}" readonly>
+                       
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Parmanent Address</legend>
+                    
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Street:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <textarea class="form-control" name="parmanent_address[street_address]" rows="3"> {{resp.parmanent_address.street_address}} </textarea>
+                       </div>
+                      <label class="control-label col-lg-2 col-md-3">Landmark:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                       <input type="text" name="parmanent_address[landmark]" class="form-control"   value ="{{resp.parmanent_address.landmark}}" >
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">City:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                    
+                      <select id="city_id" name="parmanent_address[city_id]" class="form-control">
+                        <option value=""> Select City</option>
+                        {% for city in city_dict %}
+                      
+                        <option value="{{ city.id }}" {% if city.id == resp.parmanent_address.city_id %}selected="selected"{% endif %}  >{{ city.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">State:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select id="state_id" name="parmanent_address[state_id]" class="form-control">
+                        <option value=""> Select State</option>
+                        {% for state in state_dict %}
+                      
+                        <option value="{{ state.id }}" {% if state.id == resp.parmanent_address.state_id %}selected="selected"{% endif %}  >{{ state.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Country:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select id="country_id" name="parmanent_address[country_id]" class="form-control">
+                        <option value=""> Select Country</option>
+                        {% for country in country_dict %}
+                      
+                        <option value="{{ country.id }}" {% if country.id == resp.parmanent_address.country_id %}selected="selected"{% endif %}  >{{ country.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Pincode:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="parmanent_address[pincode]" class="form-control"   value ="{{resp.parmanent_address.pincode}}" >
+                       
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Communcation Address</legend>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Street:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <textarea class="form-control" name="communication_address[street_address]" rows="3"> {{resp.communication_address.street_address}} </textarea>
+                       </div>
+                      <label class="control-label col-lg-2 col-md-3">Landmark:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                       <input type="text" name="communication_address[landmark]" class="form-control"   value ="{{resp.communication_address.landmark}}" >
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">City:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                    
+                      <select id="city_id" name="communication_address[city_id]" class="form-control">
+                        <option value=""> Select City</option>
+                        {% for city in city_dict %}
+                      
+                        <option value="{{ city.id }}" {% if city.id == resp.communication_address.city_id %}selected="selected"{% endif %}  >{{ city.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">State:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select id="state_id" name="communication_address[state_id]" class="form-control">
+                        <option value=""> Select State</option>
+                        {% for state in state_dict %}
+                      
+                        <option value="{{ state.id }}" {% if state.id == resp.communication_address.state_id %}selected="selected"{% endif %}  >{{ state.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Country:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select id="country_id" name="communication_address[country_id]" class="form-control">
+                        <option value=""> Select Country</option>
+                        {% for country in country_dict %}
+                      
+                        <option value="{{ country.id }}" {% if country.id == resp.communication_address.country_id %}selected="selected"{% endif %}  >{{ country.name }}</option>
+                        {% endfor %}
+                      </select>
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Pincode:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="communication_address[pincode]" class="form-control"   value ="{{resp.communication_address.pincode}}" >
+                       
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Contact Detail</legend>
+                   
+                     
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Mobile:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="contact_detail[mobile_number]" class="form-control"   value ="{{resp.contact_detail.mobile_number}}" >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Email:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="contact_detail[email]" class="form-control"   value ="{{resp.contact_detail.email}}" >
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Emergency Contact Person:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="contact_detail[emergency_contact_person]" class="form-control"   value ="{{resp.contact_detail.emergency_contact_person}}" >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Emergency Mobile No:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="contact_detail[emergency_mobile]" class="form-control"   value ="{{resp.contact_detail.emergency_mobile}}" >
+                       
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">Company Detail</legend>
+                    
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">ID:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[company_id]" class="form-control"   value ="{{resp.company_detail.company_id}}" readonly >
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Name:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[name]" class="form-control"   value ="{{resp.company_detail.name}}"  >
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">POC:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[company_poc]" class="form-control"   value ="{{resp.company_detail.company_poc}}"  >
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Email:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[email]" class="form-control"   value ="{{resp.company_detail.email}}"  >
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Phone:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[company_phone]" class="form-control"   value ="{{resp.company_detail.company_phone}}"  >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Website:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[company_website]" class="form-control"   value ="{{resp.company_detail.company_website}}"  >
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Address:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <textarea class="form-control" name="company_detail[address]" rows="3"> {{resp.company_detail.address}} </textarea>
+                       
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">City:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[city]" class="form-control"   value ="{{resp.company_detail.city}}"  >
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">State:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                       <input type="text" name="company_detail[state]" class="form-control"   value ="{{resp.company_detail.state}}"  >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Country:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[country]" class="form-control"   value ="{{resp.company_detail.country}}"  >
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Pincode:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="company_detail[pincode]" class="form-control"   value ="{{resp.company_detail.pincode}}"  >
+                        
+                        
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="panel-fieldset">
+                    <legend class="panel-legend">KYC Detail</legend>
+                    
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">ID:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="kyc_detail[kyc_id]" class="form-control"   value ="{{resp.kyc_detail.kyc_id}}"  >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Name:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="kyc_detail[kyc_id_name]" class="form-control"   value ="{{resp.kyc_detail.kyc_id_name}}"  >
+                        
+                        
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Status:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select  name="kyc_detail[kyc_id_status]" class="form-control">
+                      
+                                                <option value="" >Select Status</option> 
+                                                <option value="1.0"   {% if resp.kyc_detail.kyc_id_status|stringformat:"s"  == "1.0" %} selected="selected" {% endif %} >Active</option>
+                                                <option value="0.0" {% if resp.kyc_detail.kyc_id_status|stringformat:"s"  == "0.0" %}selected="selected"{% endif %} >Deactive</option>
+                        </select> 
+                     
+                      
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Address :</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="kyc_detail[kyc_adderess]" class="form-control"   value ="{{resp.kyc_detail.kyc_adderess}}"  >
+                      
+                  
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2 col-md-3">Address Name:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <input type="text" name="kyc_detail[kyc_adderess_name]" class="form-control"   value ="{{resp.kyc_detail.kyc_adderess_name}}"  >
+                        
+                      </div>
+                      <label class="control-label col-lg-2 col-md-3">Address Status:</label>
+                      <div class="col-lg-4 col-md-3 pt-10">
+                      <select  name="kyc_detail[kyc_adderess_status]" class="form-control">
+                      
+                                                <option value="" >Select Status</option> 
+                                                <option value="1.0"   {% if resp.kyc_detail.kyc_adderess_status|stringformat:"s"  == "1.0" %} selected="selected" {% endif %} >Active</option>
+                                                <option value="0.0" {% if resp.kyc_detail.kyc_adderess_status|stringformat:"s"  == "0.0" %}selected="selected"{% endif %} >Deactive</option>
+                        </select> 
+                      
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group">
+                    <div class="col-lg-12 text-right">
+                      <button class="btn btn-primary" id="sku-update">Update</button>
+                      <button class="btn btn-danger" id="sku-cancel">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <div class="product-box text-center">
+                  <img id="my_image" style="height:180px" src="/static/dist/img/avatar.png" alt="">
+                </div>
+                <button type="button" class="mt-5 mb-3 btn btn-primary" id="js-upload-photos" style="margin-left:40px;">
+                <span class="glyphicon glyphicon-cloud-upload"></span> Upload 
+                </button>
+                <input id="fileupload" type="file" name="file" multiple
+                  style="display: none;"
+                  data-url="/auth/web/upload-profile"
+                  data-form-data='{"csrfmiddlewaretoken": "dI0CEjngrRdAUNPBcb1mX1CmEhfG33EZcCkBIwL2ZLXreaMIdo9RkXFweTAOCkHS","employee_code": "{{resp.general_details.employee_code}}" }'>
+                <div class="box box-default">
+                  <div class="box-header with-border">
+                    <h3 class="box-title inv-head">Summary 
+                      <span class="pull-right label label-danger">Logs</span>
+                    </h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li>Today's Offered Trips 
+                        <span class="pull-right">258</span>
+                      </li>
+                      <li>Today's Sched Deliveries 
+                        <span class="pull-right">0</span>
+                      </li>
+                      <li>Today's Completed Deliveries
+                        <span class="pull-right">0</span>
+                      </li>
+                      <li>Today's Earn Value
+                        <span class="pull-right">0</span>
+                      </li>
+                      <li>Total Offered Trips 
+                        <span class="pull-right">249</span>
+                      </li>
+                      <li>Total Deliveries
+                        <span class="pull-right">0</span>
+                      </li>
+                      <li>Total Earn Value
+                        <span class="pull-right">0</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <div class="box box-default">
+                  <div class="box-header with-border">
+                    <h3 class="box-title inv-head">InTransit
+                      <span class="pull-right label label-danger">Logs</span>
+                    </h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li>Trip_id1
+                        <span class="pull-right">SRC-DEST</span>
+                      </li>
+                      <li>Trip_id2
+                        <span class="pull-right">SRC-DEST</span>
+                      </li>
+                      <li>Trip_id3
+                        <span class="pull-right">SRC-DEST</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CONTENT -->
+  </section>
+</div>
+<style>
+  .control-label-margin-top{
+  margin-top:11px;
+  }
+</style>
+<script src='{% static "jquery/js/vendor/jquery.ui.widget.js" %}'></script>
+<script src='{% static "jquery/js/jquery.iframe-transport.js" %}'></script>
+<script src='{% static "jquery/js/jquery.fileupload.js" %}'></script>
+<script src='{% static "jquery/js/basic-upload.js" %}'></script>
+<script>
+  $( document ).ready(function() {
+     $("#cc-update").click(function(){
+  
+         var date = $("#date").val();
+         var frequency = $("#frequency").val();
+         var CC_Type = $("#cc-type").val();
+  
+         var cc_rows = [{"Start Date":date, "Frequency":frequency, "CC Type":CC_Type}];
+  
+         
+         cc_details = {
+           "codes":cc_rows
+         }
+         alert(cc_details);
+         console.log(cc_details);
+  
+          $.ajax({
+                 type:"POST",
+                 url:"",
+                        data:JSON.stringify(cc_details),
+                        success: function (resp){
+                        alert(resp) //TODO Show Response
+                        console.log(resp)
+                    }
+                });
+  
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+      $("#btn-sku-edit").click(function(){
+          $(".sku-edit").show();
+          $(".sku-view").hide();
+          $("#btn-sku-view").show();
+          $("#btn-sku-edit").hide();
+      });
+      $("#btn-sku-view").click(function(){
+          $(".sku-edit").hide();
+          $(".sku-view").show();
+          $("#btn-sku-view").hide();
+          $("#btn-sku-edit").show();
+      });
+      $("#sku-cancel, #sku-update").click(function(){
+          $(".sku-view").show();
+          $(".sku-edit").hide(); 
+          $("#btn-sku-view").hide();
+          $("#btn-sku-edit").show();
+      });
+  
+  });
+</script>
+{% endblock %}

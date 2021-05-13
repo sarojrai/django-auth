@@ -1,0 +1,44 @@
+[
+  {
+    "model": "authentication.City",
+    "pk": 1,
+    "fields": {
+	  "state": 21,
+      "name": "Mumbai",
+      "code": "MUM",
+	  "status":1.0,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  },
+  {
+    "model": "authentication.City",
+    "pk": 2,
+    "fields": {
+	  "state": 34,
+      "name": "Noida",
+      "code": "NOI",
+	  "status":1.0,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  },
+  {
+    "model": "authentication.City",
+    "pk": 3,
+    "fields": {
+	  "state": 10,
+      "name": "New Delhi",
+      "code": "NDLS",
+	  "status":1.0,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  }
+]

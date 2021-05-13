@@ -1,0 +1,90 @@
+[
+  {
+    "model": "authentication.Role",
+    "pk": 1,
+    "fields": {
+      "role_code": "ADMIN",
+      "role_description": "Admin",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 2,
+    "fields": {
+      "role_code": "STAFF",
+      "role_description": "Staff",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 3,
+    "fields": {
+      "role_code": "SUPERVISOR",
+      "role_description": "Supervisor",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 4,
+    "fields": {
+      "role_code": "SRSUPERVISOR",
+      "role_description": "Sr.Supervisor",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 5,
+    "fields": {
+      "role_code": "MANAGER",
+      "role_description": "Manager",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 6,
+    "fields": {
+      "role_code": "SRMANAGER",
+      "role_description": "Sr.Manager",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 7,
+    "fields": {
+      "role_code": "DIRECTOR",
+      "role_description": "Director",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  },
+  {
+    "model": "authentication.Role",
+    "pk": 8,
+    "fields": {
+      "role_code": "CUSTOMER",
+      "role_description": "Customer",
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  
+	  "status":1.0
+    }
+  }
+]

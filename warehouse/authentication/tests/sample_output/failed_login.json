@@ -1,0 +1,15 @@
+#RS2
+{
+    "status": "Failed",
+    "status_code": 401,
+    "message": "Invalid login credentials",
+    "result": {}
+}
+
+#RS3
+{
+    "status": "Failed",
+    "status_code": 401,
+    "message": "Please enter username and password",
+    "result": {}
+}

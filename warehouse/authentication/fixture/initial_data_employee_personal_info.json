@@ -1,0 +1,42 @@
+[
+  {
+    "model": "authentication.EmployeePersonalInfo",
+    "pk": 1,
+    "fields": {
+      "employee": 1,
+      "father_name": "AP",
+      "mother_name": "SD",
+      "date_of_birth": "1996-02-08",
+      "gender": "Male",
+      "blood_group": "B+",
+      "address1": "Building No 23A",
+      "address2": "Flat No 304, Goragoan",
+      "address3": "Mumbai",
+      "telephone_number": "0222763731",
+      "city": 1,
+      "state": 21,
+      "country": 1,
+      "pincode": "400708"
+	}
+  },
+  {
+    "model": "authentication.EmployeePersonalInfo",
+    "pk": 2,
+    "fields": {
+      "employee": "2",
+      "father_name": "Kumar",
+      "mother_name": "abc",
+      "date_of_birth": "1991-01-10",
+      "gender": "Male",
+      "blood_group": "AB+",
+      "address1": "Noida",
+      "address2": "GB nagar",
+      "address3": "Uttar Pradesh",
+      "telephone_number": "011227637310",
+      "city": 2,
+      "state": 34,
+      "country": 1,
+      "pincode": "201301"
+    }
+  }
+]

@@ -1,0 +1,67 @@
+{% load nav_active %}
+<li class="treeview {% nav_active request 'dashboard' %}">
+   <a href="#">
+   <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+   
+   </a>
+</li>
+<li class="treeview {% nav_active request 'delivery'%}">
+   <a href="#">
+   <i class="fa fa-truck"></i> <span>Deliveries</span>
+   <span class="pull-right-container">
+   <i class="fa fa-angle-left pull-right"></i>
+   </span>
+   </a>
+   <ul class="treeview-menu">
+      <li class="{% nav_active request 'delivery_find' %}" ><a href="/delivery/find/"><i class="fa fa-circle-o"></i>Find delivery</a></li>
+      <li class="{% nav_active request 'delivery_offer' %}" ><a href="/delivery/offer/"><i class="fa fa-circle-o"></i>Offer a delivery</a></li>
+   </ul>
+</li>
+<li class="treeview {% nav_active request 'payments'%}">
+   <a href="#">
+   <i class="fa fa-money"></i> <span>Payments</span>
+   <span class="pull-right-container">
+   <i class="fa fa-angle-left pull-right"></i>
+   </span>
+   </a>
+   <ul class="treeview-menu">
+      <li class="{% nav_active request 'payments_googlepay' %}" ><a href="/payments/googlepay/"><i class="fa fa-circle-o"></i>GPay</a></li>
+      <li class="{% nav_active request 'payments_paytm' %}" ><a href="/payments/paytm/"><i class="fa fa-circle-o"></i>Paytm</a></li>
+   </ul>
+</li>
+<li class="treeview {% nav_active request 'referrals'%}">
+   <a href="#">
+   <i class="fa fa-user-plus"></i> <span>Referrals</span>
+   <span class="pull-right-container">
+   <i class="fa fa-angle-left pull-right"></i>
+   </span>
+   </a>
+   <ul class="treeview-menu">
+      <li class="{% nav_active request 'referrals_share' %}" ><a href="/referral/web/share/"><i class="fa fa-circle-o"></i>Share & Earn</a></li>
+   </ul>
+</li>
+<li class="treeview {% nav_active request 'advance_shipping_notice asn_create asn_edit asn_received goods_received_note grn_create grn_edit grn_update packet_barcode gatepass gatepass_create gatepass_edit gatepass_data process process_create process_edit quality_check qc_create qc_edit pending_putaway update_putaway put_away_edit'%}">
+   <a href="#">
+   <i class="fa fa-star"></i> <span>Ratings</span>
+   <span class="pull-right-container">
+   <i class="fa fa-angle-left pull-right"></i>
+   </span>
+   </a>
+   <ul class="treeview-menu">
+      <li class="{% nav_active request 'ratings_received' %}" ><a href="/ratings/received/"><i class="fa fa-circle-o"></i>Ratings Received</a></li>
+      <li class="{% nav_active request 'ratings_given' %}" ><a href="/ratings/given/"><i class="fa fa-circle-o"></i>Ratings Given</a></li>
+   </ul>
+</li>
+<li class="treeview {% nav_active request 'notifications'%}">
+   <a href="#">
+   <i class="fa fa-bullhorn"></i> <span>Notifications</span>
+   <span class="pull-right-container">
+   <i class="fa fa-angle-left pull-right"></i>
+   </span>
+   </a>
+   <ul class="treeview-menu">
+      <li class="{% nav_active request 'notifications_push' %}" ><a href="/notifications/push/"><i class="fa fa-circle-o"></i>Push</a></li>
+      <li class="{% nav_active request 'notifications_email' %}" ><a href="/notifications/email/"><i class="fa fa-circle-o"></i>Email</a></li>
+      <li class="{% nav_active request 'notifications_email' %}" ><a href="/notifications/sms/"><i class="fa fa-circle-o"></i>SMS</a></li>
+   </ul>
+</li> 

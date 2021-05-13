@@ -1,0 +1,38 @@
+[
+  {
+    "model": "authentication.Country",
+    "pk": 1,
+    "fields": {
+      "name": "India",
+      "code": "IN",
+      "currency": "rs",
+      "currency_code": "rs",
+      "isd_code": "+91",
+      "continent": "Asia",
+      "time_zone": "+5.30 GMT",
+	  "status":1.0,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  },
+  {
+    "model": "authentication.Country",
+    "pk": 2,
+    "fields": {
+      "name": "Brazil",
+      "code": "BRZ",
+      "currency": "RS",
+      "currency_code": "RS",
+      "isd_code": "+96",
+      "continent": "Australia",
+      "time_zone": "+5.30 GMT",
+	  "status":1.0,
+	  "added_on":"2019-01-01 00:00:00",
+	  "updated_on":"2019-01-01 00:00:00",	  	 
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  }
+]

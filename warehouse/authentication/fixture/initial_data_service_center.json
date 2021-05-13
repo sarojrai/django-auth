@@ -1,0 +1,52 @@
+[
+  {
+    "model": "authentication.ServiceCentre",
+    "pk": 1,
+    "fields": {
+	  "city": 1,
+      "name": "ORDC Mumbai",
+      "code": "MUMWMS",
+      "sc_email": "mumwms@ordc.in",
+      "sc_phone": "+91987654321",
+      "registration_number": "ORDCREG132456",
+      "contact_person": "Ordc Admin",
+      "person_email": "ordcinfo@gmail.com",
+      "person_mobile": "+919867541112",	  
+      "landmark": "Near Goregaon Station",	  
+      "address1": "New Dindoshi",	  
+      "address2": "Gen. A.K. Vaidya Marg",	  
+      "address3": "Goregaon(East)",	  
+      "pincode": "400063",	  
+	  "status":1.0,
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00",
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  },
+  {
+    "model": "authentication.ServiceCentre",
+    "pk": 2,
+    "fields": {
+	  "city": 3,
+      "name": "ORDC Delhi WMS",
+      "code": "DLWMS",
+      "sc_email": "info@ordcwms.com",
+      "sc_phone": "+91987654321",
+      "registration_number": "ORDCREG1234",
+      "contact_person": "Pradeep Kumar",
+      "person_email": "guptapp310@gmail.com",
+      "person_mobile": "+919867541112",	  
+      "landmark": "Saket Mall",	  
+      "address1": "23/501 New Road Saket",	  
+      "address2": "South Delhi",
+      "address3": "New Delhi",	  
+      "pincode": "110001",	  
+	  "status":1.0,
+      "added_on":"2019-01-01 00:00:00",
+      "updated_on":"2019-01-01 00:00:00",
+	  "additonal_info_key":"additional info key",
+	  "additonal_info_value":"additional info value"
+    }
+  }
+]

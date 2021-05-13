@@ -1,0 +1,28 @@
+# RS1
+{
+    "status": "Failed",
+    "status_code": 200,
+    "message": "Username \"saroj1\" is already in use.",
+    "result": {
+        "username": "saroj1",
+        "firstname": "saroj2",
+        "lastname": "rai3",
+        "mobile_number": "9987313683",
+        "user_type": "USER"
+    }
+}
+
+#RS2
+
+{
+    "status": "Failed",
+    "status_code": 200,
+    "message": "Mobile No \"9987313683\" is already in use.",
+    "result": {
+        "username": "saroj2",
+        "firstname": "saroj2",
+        "lastname": "rai3",
+        "mobile_number": "9987313683",
+        "user_type": "USER"
+    }
+}

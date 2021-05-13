@@ -1,0 +1,542 @@
+[
+  {
+    "model": "authentication.State",
+    "pk": 1,
+    "fields": {
+          "country": "1",
+      "name": "Andaman and Nicobar Islands",
+      "code": "AN",
+      "gst_service_code": "35",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+  {
+    "model": "authentication.State",
+    "pk": 2,
+    "fields": {
+       "country": "1",
+      "name": "Andhra Pradesh",
+      "code": "AD",
+      "gst_service_code": "37",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 3,
+    "fields": {
+      "country": "1",
+      "name": "Arunachal Pradesh",
+      "code": "AR",
+      "gst_service_code": "12",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 4,
+    "fields": {
+      "country": "1",
+      "name": "Assam",
+      "code": "AS",
+      "gst_service_code": "18",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 5,
+    "fields": {
+      "country": "1",
+      "name": "Bihar",
+      "code": "BR",
+      "gst_service_code": "10",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 6,
+    "fields": {
+      "country": "1",
+      "name": "Chandigarh",
+      "code": "CH",
+      "gst_service_code": "04",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 7,
+    "fields": {
+      "country": "1",
+      "name": "Chattisgarh",
+      "code": "CG",
+      "gst_service_code": "22",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 8,
+    "fields": {
+      "country": "1",
+      "name": "Dadra and Nagar Haveli",
+      "code": "DN",
+      "gst_service_code": "26",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 9,
+    "fields": {
+      "country": "1",
+      "name": "Daman and Diu",
+      "code": "DD",
+      "gst_service_code": "25",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 10,
+    "fields": {
+          "country": "1",
+      "name": "Delhi",
+      "code": "DL",
+      "gst_service_code": "07",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 11,
+    "fields": {
+          "country": "1",
+      "name": "Goa",
+      "code": "GA",
+      "gst_service_code": "30",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 12,
+    "fields": {
+          "country": "1",
+      "name": "Gujarat",
+      "code": "GJ",
+      "gst_service_code": "24",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 13,
+    "fields": {
+          "country": "1",
+      "name": "Haryana",
+      "code": "HR",
+      "gst_service_code": "06",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 14,
+    "fields": {
+          "country": "1",
+      "name": "Himachal Pradesh",
+      "code": "HP",
+      "gst_service_code": "02",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 15,
+    "fields": {
+          "country": "1",
+      "name": "Jammu and Kashmir",
+      "code": "JK",
+      "gst_service_code": "01",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 16,
+    "fields": {
+          "country": "1",
+      "name": "Jharkhand",
+      "code": "JH",
+      "gst_service_code": "20",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 17,
+    "fields": {
+          "country": "1",
+      "name": "Karnataka",
+      "code": "KA",
+      "gst_service_code": "29",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 18,
+    "fields": {
+          "country": "1",
+      "name": "Kerala",
+      "code": "KL",
+      "gst_service_code": "32",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 19,
+    "fields": {
+          "country": "1",
+      "name": "Lakshadweep Islands",
+      "code": "LD",
+      "gst_service_code": "31",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 20,
+    "fields": {
+          "country": "1",
+      "name": "Madhya Pradesh",
+      "code": "MP",
+      "gst_service_code": "23",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 21,
+    "fields": {
+      "country": "1",
+      "name": "Maharashtra",
+      "code": "MH",
+      "gst_service_code": "27",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk":22,
+    "fields": {
+      "country": "1",
+      "name": "Manipur",
+      "code": "MN",
+      "gst_service_code": "14",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 23,
+    "fields": {
+      "country": "1",
+      "name": "Meghalaya",
+      "code": "ML",
+      "gst_service_code": "17",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 24,
+    "fields": {
+      "country": "1",
+      "name": "Mizoram",
+      "code": "MZ",
+      "gst_service_code": "15",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 25,
+    "fields": {
+      "country": "1",
+      "name": "Nagaland",
+      "code": "NL",
+      "gst_service_code": "13",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 26,
+    "fields": {
+      "country": "1",
+      "name": "Odisha",
+      "code": "OD",
+      "gst_service_code": "21",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 27,
+    "fields": {
+      "country": "1",
+      "name": "Pondicherry",
+      "code": "PY",
+      "gst_service_code": "34",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 28,
+    "fields": {
+      "country": "1",
+      "name": "Punjab",
+      "code": "PB",
+      "gst_service_code": "03",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 29,
+    "fields": {
+      "country": "1",
+      "name": "Rajasthan",
+      "code": "RJ",
+      "gst_service_code": "08",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 30,
+    "fields": {
+      "country": "1",
+      "name": "Sikkim",
+      "code": "SK",
+      "gst_service_code": "11",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 31,
+    "fields": {
+      "country": "1",
+      "name": "Tamil Nadu",
+      "code": "TN",
+      "gst_service_code": "33",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 32,
+    "fields": {
+      "country": "1",
+      "name": "Telangana",
+      "code": "TS",
+      "gst_service_code": "36",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 33,
+    "fields": {
+      "country": "1",
+      "name": "Tripura",
+      "code": "TR",
+      "gst_service_code": "16",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 34,
+    "fields": {
+      "country": "1",
+      "name": "Uttar Pradesh",
+      "code": "UP",
+      "gst_service_code": "09",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 35,
+    "fields": {
+      "country": "1",
+      "name": "Uttarakhand",
+      "code": "UK",
+      "gst_service_code": "05",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  },
+{
+    "model": "authentication.State",
+    "pk": 36,
+    "fields": {
+      "country": "1",
+      "name": "West Bengal",
+      "code": "WB",
+      "gst_service_code": "19",
+          "status":1.0,
+          "added_on":"2019-01-01 00:00:00",
+          "updated_on":"2019-01-01 00:00:00",
+          "additonal_info_key":"additional info key",
+          "additonal_info_value":"additional info value"
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "model": "authentication.Organisation",
+    "pk": 1,
+    "fields": {
+      "name": "Nilraj Enterprises",
+      "code": "NLRJ",
+      "address": "13, Old Guest House, Bhadran Nargar Road No-2, S.V Road Malad, Malad(W)",
+      "city": 1,
+      "pincode": "400064",
+      "activation_status": true,
+      "activation_date": "2020-01-01",
+      "contact_person": "Raju Bhai",
+      "contact_person_phone": "+912228070424",	  	  
+      "email": "nilrajpens@gmail.com",
+      "gst_number": "27AAIFN3887G1ZU",	  
+      "gst_type": "Other",	  
+	  "added_on":"2020-01-01 00:00:00",
+	  "updated_on":"2020-01-01 00:00:00",	  	 
+	  "status":1.0,	  
+	  "info_key":"info key",
+	  "info_value":"info value"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+
+RS1
+{
+    "status": "Failed",
+    "status_code": 200,
+    "message": "No record found for given employee_code",
+    "result": {
+        "employee_code": "CUSTA3FB6F30",
+        "action_type": "DE-ACTIVATE"
+    }
+}
+
+#RS2
+{
+    "status": "Failed",
+    "status_code": 200,
+    "message": "No record found for given employee_code",
+    "result": {
+        "employee_code": "CUSTA3FB6F30",
+        "action_type": "DEACTIVATE"
+    }
+}
